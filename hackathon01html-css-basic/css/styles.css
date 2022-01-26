@@ -1,0 +1,574 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/citrusBg-453kb.jpg");
+    background-repeat: cover;
+    background-color:rgb(112, 170, 134);
+    background-blend-mode:luminosity;
+    font-family: 'Dancing Script', serif;
+    text-align: center;
+  
+}
+header {
+    margin:0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em;
+    justify-content: space-around;
+    align-items: center;
+    background-color:rgb(91, 150, 148, .75);
+    width: 100%;
+}
+h1 {
+    font-size: 3rem;
+    color: oldlace;
+    justify-self: center;
+    text-shadow: 6px 6px 6px rgb(67, 107, 87)
+
+}
+section {
+    margin: 2em auto;
+    padding: 1em;
+    width: 80%;
+    background-color:rgb(91, 150, 148, .75);
+    border: 5px solid rgb(91, 150, 148);
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgb(67, 107, 87);
+    color: oldlace;
+}
+.logo {
+    background-color: oldlace;
+    border: 10px solid rgb(248, 223, 178);
+    border-radius: 20px;
+    width: 22em;
+    padding: 1em;
+    margin: 2em 1em;
+    box-shadow: 10px 10px 10px rgb(67, 107, 87);
+}
+.r-tips {
+    border: 5px solid rgb(67, 107, 87);
+}
+
+/*index-page*/
+.index-body{
+    margin:2em auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+.index-logo {
+    display: none;
+    background-color: oldlace;
+    border: 10px solid rgb(248, 223, 178);
+    border-radius: 20px;
+    padding: 1em;
+    margin: 0 auto;
+    box-shadow: 10px 10px 10px rgb(67, 107, 87);
+}
+.logo-img-size{
+    width: 16em;
+}
+.card {
+    background-color: oldlace;
+    color: rgb(91, 150, 148);
+    width: 10em;
+    max-width: 15em;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    border: 10px solid rgb(248, 223, 178);
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 10px 10px 10px rgb(67, 107, 87);  
+}
+.flex-container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;  
+}
+.flex-container > * {
+    flex: 1;
+}
+
+/* navigation */
+nav a {
+    text-decoration: none;
+    color:rgb(91, 150, 148);
+}
+footer {
+    width: 100vw;  
+}
+.main-nav, .footer-nav {
+    margin: 0;
+    padding: 0;
+    background-color: oldlace;
+    color: rgb(91, 150, 148);
+    min-height: 100px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.main-nav{
+    background-color: rgb(255, 245, 227, 0.85)
+}
+.footer-nav {
+    margin-top: 2em;
+    padding: 1em;
+}
+.main-nav a, .footer-nav a {
+    text-decoration: none;
+    padding: 0.5em;
+    border: 3px solid rgb(248, 223, 178);
+    border-radius: 5px;
+}
+.main-nav li {
+    background-color: oldlace;
+    padding: 0.5em 0em;
+}
+.main-nav a .active, .active {
+    background-color:rgb(91, 150, 148);
+    color: oldlace;
+}
+
+/* category page and individual category pages layout*/
+.grid-body {
+    margin: 0 auto;
+    width: 96%;
+    display: grid;
+    grid-template-columns:repeat(12, 1fr);
+    grid-gap: 2em;
+    grid-template-areas:
+        "h h h h h h h h h h h h"
+        "n n n n n n n n n n n n"
+        ". ma ma ma ma ma ma ma ma ma ma ."
+        ". mb mb mb mb mb mb mb mb mb mb ."
+        ". mc mc mc mc mc mc mc mc mc mc ."
+        ". md md md md md md md md md md ."
+        ". me me me me me me me me me me ."
+        ". mf mf mf mf mf mf mf mf mf mf ."
+        "f f f f f f f f f f f f"
+    ;
+}
+.recipe-list {
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    grid-auto-rows: (minmax 200px auto );
+    grid-gap: 2em;
+    grid-template-areas:
+        "ma ma ma ma"
+        "mf mf mf mf"
+        "mb mb mb mb"
+        "me me me me"
+        "mc mc mc mc"
+        "md md md md";
+} 
+.main-nav {
+    grid-area: n;
+}
+.cat-header {
+    grid-area: h;
+}
+.cat-one, .rl-one{
+    grid-area: ma;
+}
+.cat-two, .rl-two{
+    grid-area: mb;
+}
+.cat-three, .rl-three{
+    grid-area: mc;
+}
+.cat-four, .rl-four{
+    grid-area: md;
+}
+.cat-five, .rl-five{
+    grid-area: me;
+}
+.cat-six, .rl-six{
+    grid-area: mf;
+}
+.cat-footer{
+    grid-area: f;
+}
+.cat-list {
+    display:grid;
+    grid-template-columns: 1fr 5fr;
+    align-items: center;
+    background-color: rgb(180, 162, 128, 0.75);
+    border: 4px solid rgb(180, 162, 128);
+    border-radius: 16px;
+    box-shadow: 10px 10px 10px rgb(67, 107, 87);
+    overflow: hidden;
+    text-decoration: none;
+}
+.cat-img {
+    width: 100%;
+    padding: 0.2em;
+    min-width: 7em;
+    max-width: 11em; 
+    min-height: 8em;
+    max-height: 12.5em;
+    align-self: center;
+    border: 3px solid rgb(248, 223, 178);
+    border-radius: 10px;
+}
+.cat-text {
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    color: oldlace;
+}
+.cat-text h3{
+    margin: 0 10px;
+    font-size: 1.5rem;
+    padding: 1.5em;
+    border: 3px solid rgb(248, 223, 178);
+    border-radius: 10px;
+}
+.cat-text p {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.5em;
+    padding: 1em;
+    border: 3px solid rgb(248, 223, 178);
+    border-radius: 10px;
+}
+.YTvideo{
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+.iframe {
+    background-color:rgb(91, 150, 148, .75);
+    border: 5px solid rgb(91, 150, 148);
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgb(67, 107, 87);
+    color: oldlace;
+}
+iframe {
+    width: 100%;
+    object-fit: contain;
+}
+.rec-list {
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    grid-template-areas: 
+    "img img img img"
+    "title title title title"
+    "text text text text";
+    align-items: center;
+
+    color:oldlace;
+    text-decoration: none;
+    border: 5px solid rgb(67, 107, 87);
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgb(67, 107, 87)
+}
+.rec-title {
+    grid-area: title;
+    padding: 0.5em;
+    font-size: 1.5rem;
+    border: 3px solid rgb(248, 223, 178);
+    border-radius: 10px;
+}
+.rec-text {
+    grid-area: text;
+    padding: 1em;
+    line-height: 1.1em;
+    border: 3px solid rgb(248, 223, 178);
+    border-radius: 10px;
+}
+.rec-img {
+    grid-area: img;
+    width: 100%;
+    max-width: 15em;
+    border: 3px solid rgb(248, 223, 178);
+    border-radius: 10px;
+}
+.about-img {
+    border: 10px solid rgb(91, 150, 148);
+    border-radius: 10px;
+    box-shadow: 15px 15px 15px rgb(67, 107, 87);
+    margin-top: 2em;
+}
+
+/* Recipe Page layout*/
+r-main{
+    margin: 2em auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+}
+.r-img {
+    margin: 0 auto;
+    width: 50%;
+    min-width: 20em;
+    background-color:rgb(91, 150, 148, .75);
+    border: 5px solid rgb(67, 107, 87);
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgb(67, 107, 87);
+}
+.r-img img {
+    width: 100%;
+}
+.r-ingredients {
+    margin: 2em auto;
+    width: 35%;
+    padding: 0 10px;
+    background-color: rgb(91, 150, 148, .75);
+    color: oldlace;
+    border: 5px solid rgb(67, 107, 87);
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgb(67, 107, 87);
+}
+.r-method{
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 65%;
+    background-color: rgb(91, 150, 148, .75);
+    color: oldlace;
+    border: 5px solid rgb(67, 107, 87);
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgb(67, 107, 87);
+}
+
+/* contactpage layout */
+.form-intro{
+    font-size: 1.2rem;
+    line-height: 1.1em;
+}
+form {
+    padding: 1em;
+    border: 3px solid rgb(180, 162, 128);
+    border-radius: 10px;
+    font-size: 18px;
+}
+.newsletter {
+    display: inline-block;
+    margin-bottom: 1em;
+    padding: 0 1em 1em 1em;
+    background-color: rgb(180, 162, 128, 0.5);
+    border: 3px solid rgb(91, 150, 148);
+    border-radius: 3px;
+    box-shadow: 5px 5px 5px rgb(67, 107, 87);
+}
+.btn{
+    background-color: rgb(91, 150, 148, .75);
+    color: oldlace;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: normal;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    text-align: center;
+    border: 3px solid rgb(91, 150, 148);
+    border-radius: 4px;
+    box-shadow: 5px 5px 5px rgb(67, 107, 87);
+}
+input, textarea, fieldset {
+    background-color: rgb(180, 162, 128, 0.5);
+    color: oldlace;
+    font-family: serif;
+    font-size: 18px;
+    border: 3px solid rgb(91, 150, 148);
+    border-radius: 3px;
+    box-shadow: 5px 5px 5px rgb(67, 107, 87);
+}
+fieldset {
+    text-align:left;
+    width: 96%;
+    font-family:'Dancing Script', serif;
+}
+.ingredients {
+    display:inline-block;
+    padding: auto, 0;
+}
+#ingr, #method {
+    background-color:rgb(180, 162, 128, 0) ;
+    border: none;
+    box-shadow: none;
+}
+.closer{
+    font-size: 24px;
+}
+
+/*media queries*/
+@media screen and (min-width: 600px){
+    body{
+        font-size: 1.2rem;
+        line-height: 1.2em;
+    }
+    /*index-page and about-page*/
+    .index-body, .flex-container{
+        flex-direction: row;
+    }
+    /*category-pages*/
+    .intro, .r-tips {
+        display:grid;
+        gap: 1em;
+        grid-template-areas:
+        "t t"
+        "p1 p2"
+        "p1 p2"
+    }
+    .intro-title, .tips-title{
+        grid-area: t;
+    }
+    .intro-p1, .tips-p1{
+        grid-area: p1;
+    }
+    .into-p2, .tips-p2{
+        grid-area: p2;
+    }
+    .rec-list {
+        display: grid;
+        grid-template-columns:repeat(4 1fr);
+        grid-template-areas: 
+        ". img img ."
+        "title title title title"
+        "text text text text";  
+    }
+    .YTvideo {
+        width: 45%;
+    }
+    /*recipe page*/
+    .r-main{
+        margin: 0 auto;
+        width: 80%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .r-img{
+        width: 45%;
+    }
+    .r-ingr{
+        width: 35%;
+    }
+}
+@media screen and (min-width: 900px){
+    body{
+        font-size: 1.3rem;
+        line-height: 1.2em;
+    }
+
+    .rec-list {
+        display: grid;
+        grid-template-columns:repeat(4, 1fr);
+        grid-template-areas: 
+        "img img title title"
+        "text text text text";
+    }
+    .YTvideo {
+        width: 60%;
+        flex-direction: row;
+        margin: 0 auto;
+    } 
+    .r-main {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 50px 1fr 1fr 1fr 1fr 50px;
+        gap: 2em;
+        grid-template-areas: 
+            ". img img ingr ingr ."
+            ". met met met met .";   
+    }
+    .r-img{
+        grid-area: img;
+    }
+    .r-ingredients{
+        grid-area: ingr; 
+        width: 100%;
+        padding-right: 2em;
+    }
+    .r-method{
+        grid-area: met;
+        width: 100%;
+    }
+}
+@media screen and (min-width: 1033px){
+    header {
+        padding: 1em;
+        gap: 4em;
+        justify-content: center;
+        align-items: center;
+        background-color:rgb(91, 150, 148, .75);
+        width: 100%;
+    }
+    .index-header{
+        display: none;
+    }
+    .index-logo{
+        display: block;
+    }
+    .index-body{
+    width: 100%;
+    display: grid;
+    align-content: center;
+    grid-template-columns: repeat(12 1fr); 
+    grid-template-columns: 200px repeat(10 1fr) 200px;
+    grid-template-areas:
+        ".   .     .   .  .   .   .   .   .    .   .   ."
+        ".   .     .   . one one two two  .    .   .   ."
+        ". three three . one one two two  .  four four ."
+        ". three three . one one two two  .  four four ."
+        ". three three .  .   .   .    .  .  four four ."
+        ".   .     .   .  . logo logo  .  .    .   .   ."
+        ".   .     .   .  . logo logo  .  .    .   .   ."
+        ". five five   .  .   .   .    .  .   six six  ."
+        ". five five   .  .  seve seve .  .   six six  ."
+        ". five five   .  .  seve seve .  .   six six  ."
+        ".   .     .   .  .  seve seve .  .    .   .   ."
+        ".   .     .   .  .   .   .    .  .    .   .   .";
+    }
+    .index-logo{
+        grid-area: logo;
+    }
+    .c-one{
+        grid-area: one;
+    }
+    .c-two{
+        grid-area: two;
+    }
+    .c-three{
+        grid-area: three;
+    }
+    .c-four{
+        grid-area: four;
+    }
+    .c-five{
+        grid-area: five;
+    }
+    .c-six{
+        grid-area: six;
+    }
+    .c-seven{
+        grid-area: seve;
+    }  
+}
+
+
+
+
+
+
+

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pauline's Contact</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Playfair+Display+SC:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">   
+</head>
+<body>
+    <header>
+        <img src="img/logo2pauline'2-12kb.png" alt="Pauline's Recipe Corner logo" class="logo">
+        <h1>Contact</h1>
+    </header>
+    <nav>
+        <ul class="main-nav">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="category.html">CATEGORY</a></li>
+            <li><a class="active" href="contact.html">CONTACT</a></li>
+            <li><a href="recipe.html">RECIPE</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="con-info">
+            Pauline Willemse<br>
+            P/O Box 12345<br>
+            1300 AA Almere<br>
+            The Netherlands<br><br>
+
+            <p class="form-intro">Or send me a message through the form below.</p>
+            <br>
+            <form name="contact" method="POST" data-netlify="true">
+                <fieldset class="ingredients">
+                    <legend>Contact Form</legend>
+                    <label>Name:<input type="text" name="name" /></label><br><br>
+                    <label>Email:<input type="email" name="email" /></label><br><br>
+                    <label>Message:<textarea name="message"></textarea></label><br><br>
+                </fieldset><br><br>    
+                    <div class="newsletter">
+                        <p>Subscribe to my newsletter?</p>
+                        <input type="radio" id="yes" name="newsletter" value="Yes">
+                        <label for="yes">Yes</label><br>
+                        <input type="radio" id="no" name="newsletter" value="No">
+                        <label for="no">No</label>
+                    </div>
+                    <p>
+                    <button class="btn" type="submit">Send in your comment</button>
+                    </p>
+               
+              </form><br>
+
+              <p class="form-intro">You can submit a recipe for consideration on this site with the following form.</p><br>
+
+              <form name="recipe" method="POST" data-netlify="true">
+                  <label>Name: <input type="text" name="name"></label><br><br>
+                  <label>Email: <input type="email" name="email"></label><br><br>
+                  <fieldset class="ingredients">
+                      <legend>The Category is:</legend>
+                        <input type="radio" id="asian" name="category" value="Asian">
+                        <label for="asian">Asian</label><br>
+                        <input type="radio" id="italian" name="category" value="Italian">
+                        <label for="italian">Italian</label><br>
+                        <input type="radio" id="keto" name="category" value="Keto">
+                        <label for="keto">Keto</label><br>
+                        <input type="radio" id="canning" name="category" value="Canning">
+                        <label for="canning">Canning</label><br>
+                        <input type="radio" id="bread" name="category" value="Bread">
+                        <label for="bread">Bread</label><br>
+                        <input type="radio" id="pastry" name="category" value="Pastry">
+                        <label for="pastry">Pastry</label><br>
+                    </fieldset><br>
+                    <fieldset class="ingredients">
+                        <legend>The Ingredients are:</legend>
+                        <textarea name="ingredients" id="ingr" cols="16" rows="10"></textarea>
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>The Method is:</legend>
+                        <textarea name="method" id="method" cols="16" rows="10"></textarea>
+                    </fieldset><br>
+                    <div class="newsletter">
+                        <p>Subscribe to my newsletter?</p>
+                        <input type="radio" id="yeah" name="newsletter" value="Yes">
+                        <label for="yeah">Yes</label><br>
+                        <input type="radio" id="nah" name="newsletter" value="No">
+                        <label for="nah">No</label>
+                    </div><br>
+                    <button class="btn" type="submit">Send in your Recipe</button><br><br>
+                    <p class="closer">Thank you for your input.<br><br>Pauline.</p><br>
+              </form>
+        </section>
+        
+    </main>
+    <footer>
+        <ul class="footer-nav">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="category.html">CATEGORY</a></li>
+        <li><a class="active" href="contact.html">CONTACT</a></li>
+        <li><a href="recipe.html">RECIPE</a></li>
+        </ul>
+        </footer> 
+</body>
+</html>
